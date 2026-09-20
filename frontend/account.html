@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .profile-card {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 20px;
+      width: 300px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .user-icon {
+      width: 80px;
+      height: 80px;
+      border: 2px solid #007BFF;
+      border-radius: 50%;
+      margin: 0 auto 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 40px;
+      color: #007BFF;
+    }
+    .details {
+      color: orange;
+      text-align: left;
+      margin-bottom: 20px;
+    }
+    .details p {
+      margin: 5px 0;
+    }
+    .button {
+      border: 2px solid green;
+      padding: 10px;
+      border-radius: 5px;
+      color: green;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .button:hover {
+      background-color: #e6ffe6;
+    }
+  </style>
+</head>
+<body>
+  <div class="profile-card">
+    <div class="user-icon">👤</div>
+    <div class="details">
+      <p><strong>Name:</strong> </p>
+      <p><strong>Mobile number:</strong> </p>
+      <p><strong>Address:</strong> </p>
+      <p><strong>Margin Capital:</strong> </p>
+    </div>
+    <div class="button">Your bookings and rides</div>
+  </div>
+
+  <script>
+    // JavaScript to fetch and display user details
+    document.addEventListener('DOMContentLoaded', () => {
+      // Simulated user data
+      const userData = {
+        name: "John Doe",
+        mobile: "+1234567890",
+        address: "123 Main St, City, Country",
+        marginCapital: "$5000"
+      };
+
+      // Populate the profile card with user data
+      const detailsDiv = document.querySelector('.details');
+      detailsDiv.innerHTML = `
+        <p><strong>Name:</strong> ${userData.name}</p>
+        <p><strong>Mobile number:</strong> ${userData.mobile}</p>
+        <p><strong>Address:</strong> ${userData.address}</p>
+        <p><strong>Margin Capital:</strong> ${userData.marginCapital}</p>
+      `;
+    });
+  </script>
+</body>
+</html>
