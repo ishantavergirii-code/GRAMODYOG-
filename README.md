@@ -7,10 +7,11 @@ Frontend-only Next.js demo for the group project wireframes. No backend — sign
 This app is meant to run **only from this folder**, with its own dependencies and env file:
 
 ```bash
-cd C:\Users\omkar\Projects\groupproject1
+
 npm install
 cp .env.example .env.local   # already created for local dev
-npm run dev
+npm run build
+npm run start
 ```
 
 Open [http://localhost:3000](http://localhost:3000).
