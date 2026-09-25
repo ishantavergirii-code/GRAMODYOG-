@@ -14,10 +14,20 @@ function readRaw(): AppData {
     const raw = localStorage.getItem(getStorageKey());
     if (!raw) return emptyData();
     const parsed = JSON.parse(raw) as Partial<AppData>;
+    const legacyWebhook = localStorage.getItem("gramodyog_webhook_url");
+    const mergedSettings: Settings = {
+      ...DEFAULT_SETTINGS,
+      ...parsed.settings,
+      webhookUrl:
+        parsed.settings?.webhookUrl ||
+        legacyWebhook ||
+        process.env.NEXT_PUBLIC_N8N_WEBHOOK_URL ||
+        DEFAULT_SETTINGS.webhookUrl,
+    };
     return {
       user: parsed.user ?? null,
       ideas: parsed.ideas ?? [],
-      settings: { ...DEFAULT_SETTINGS, ...parsed.settings },
+      settings: mergedSettings,
       lastEmail: parsed.lastEmail ?? "",
     };
   } catch {

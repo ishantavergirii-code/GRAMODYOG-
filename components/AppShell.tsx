@@ -54,7 +54,7 @@ export function AppShell({
           <SidebarNav />
         </aside>
 
-        <div className="flex min-h-dvh flex-1 flex-col">
+        <div className="flex min-h-dvh flex-1 min-w-0 w-full flex-col">
           <header className="sticky top-0 z-40 border-b border-zinc-200 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80">
             <div className="flex items-center justify-between gap-3 px-4 py-3 md:px-6">
               <div className="flex min-w-0 flex-1 items-center gap-2">
@@ -92,7 +92,7 @@ export function AppShell({
                 {sidePanel}
               </div>
             ) : null}
-            <main className="flex flex-1 flex-col px-4 py-5 pb-24 md:px-6 lg:pb-8">
+            <main className="flex flex-1 min-w-0 w-full flex-col px-4 py-5 pb-24 md:px-6 lg:pb-8">
               {children}
             </main>
           </div>

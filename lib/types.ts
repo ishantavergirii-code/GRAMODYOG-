@@ -26,6 +26,7 @@ export type Idea = {
 export type Settings = {
   notifications: boolean;
   compactCards: boolean;
+  webhookUrl: string;
 };
 
 export type AppData = {
@@ -38,4 +39,5 @@ export type AppData = {
 export const DEFAULT_SETTINGS: Settings = {
   notifications: true,
   compactCards: false,
+  webhookUrl: "http://localhost:5678/webhook/gramodyog-chat-trigger",
 };

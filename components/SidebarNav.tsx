@@ -28,6 +28,26 @@ export function SidebarNav() {
           </Link>
         );
       })}
+
+      <div className="mt-8 pt-4 border-t border-zinc-100">
+        <Link
+          href="/settings"
+          className="group block rounded-xl border border-emerald-200/80 bg-emerald-50/60 p-3 transition hover:bg-emerald-100/60"
+        >
+          <div className="flex items-center gap-2">
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75"></span>
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500"></span>
+            </span>
+            <span className="text-xs font-semibold text-emerald-900">
+              n8n Live Webhook
+            </span>
+          </div>
+          <p className="mt-1 font-mono text-[10px] text-emerald-700 truncate">
+            localhost:5678
+          </p>
+        </Link>
+      </div>
     </nav>
   );
 }
